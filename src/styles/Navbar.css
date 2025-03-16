@@ -1,0 +1,137 @@
+/* Variables CSS */
+:root {
+  --navbar-width: 280px;
+  --navbar-collapsed-width: 100px;
+  --navbar-background: #1E40AF; /* Bleu foncé */
+  --navbar-button-bg: transparent;
+  --navbar-button-hover-bg: rgba(147, 197, 253, 0.2); /* Bleu clair avec transparence */
+  --navbar-text-color: #FFFFFF; /* Texte blanc */
+  --navbar-text-hover-color: #93C5FD; /* Bleu clair pour les survols */
+  --navbar-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+  --profile-image-size: 90px;
+  --navbar-border-color: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(15px);
+}
+
+/* Styles de base pour la barre de navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+  width: var(--navbar-width);
+  background: var(--navbar-background);
+  backdrop-filter: var(--glass-blur);
+  padding: 30px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: var(--navbar-shadow);
+  transition: width var(--transition-speed) ease-in-out;
+  overflow-y: auto;
+  border-right: 1px solid var(--navbar-border-color);
+  margin-right: 20px; /* Espace entre la Navbar et le contenu */
+}
+
+/* Styles pour la barre de navigation réduite */
+nav.collapsed {
+  width: var(--navbar-collapsed-width);
+  padding: 30px 12px;
+}
+
+/* Bouton de bascule pour replier/déplier la barre */
+.toggle-button {
+  position: absolute;
+  right: -50px;
+  top: 20px;
+  background-color: var(--navbar-background);
+  color: var(--navbar-text-color);
+  border: 1px solid var(--navbar-border-color);
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-speed) ease;
+}
+
+.toggle-button:hover {
+  background-color: var(--navbar-button-hover-bg);
+  color: var(--navbar-text-hover-color);
+  transform: scale(1.2);
+}
+
+/* Styles pour l'image de profil */
+.profile-image {
+  width: var(--profile-image-size);
+  height: var(--profile-image-size);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--navbar-text-hover-color);
+  box-shadow: 0px 0px 20px rgba(147, 197, 253, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Styles pour les boutons de navigation */
+nav button {
+  background-color: var(--navbar-button-bg);
+  color: var(--navbar-text-color);
+  border: none;
+  padding: 14px 20px;
+  margin: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Effet de survol pour les boutons */
+nav button:hover {
+  background-color: var(--navbar-button-hover-bg);
+  color: var(--navbar-text-hover-color);
+  transform: translateX(8px);
+}
+
+/* Styles pour le bouton actif */
+nav button.active {
+  background-color: rgba(147, 197, 253, 0.2);
+  color: var(--navbar-text-hover-color);
+  transform: translateX(8px);
+}
+
+/* Transition pour le texte lors du repli */
+nav.collapsed button span {
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+nav button span {
+  opacity: 1;
+  transition: opacity var(--transition-speed) ease;
+}
+
+/* Styles pour la section du profil */
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-speed) ease;
+}
+
+.profile-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(147, 197, 253, 0.3);
+}

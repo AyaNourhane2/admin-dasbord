@@ -1,0 +1,134 @@
+/* Styles pour la Navbar2 */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1E40AF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar2-left h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .navbar2-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar2-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .message-icon {
+    font-size: 20px;
+  }
+  
+  .message-count {
+    background-color: #EF4444; /* Rouge pour les notifications */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+  
+  /* Styles pour la boîte de messages */
+  .message-box {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1000;
+  }
+  
+  .message-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  .messages-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .message-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .message-item p {
+    margin: 5px 0;
+  }
+  
+  .message-item textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    resize: vertical;
+  }
+  
+  .message-item button {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .message-item button:hover {
+    background-color: #2980b9;
+  }
+  /* Ajoutez ces styles à la fin de votre fichier Navbar2.css */
+
+.quit-button {
+  background-color: #EF4444; /* Rouge pour indiquer une action critique */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles pour le header de la boîte des messages */
+.message-box-header {
+    display: flex;
+    justify-content: space-between; /* Aligner le titre et le bouton */
+    align-items: center; /* Centrer verticalement */
+    margin-bottom: 15px; /* Espacement entre le header et la liste des messages */
+  }
+  
+  /* Styles pour le bouton de fermeture avec l'icône X */
+  .close-button {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Supprimer la bordure */
+    color: #2c3e50; /* Couleur du texte */
+    font-size: 24px; /* Taille de l'icône */
+    cursor: pointer;
+    padding: 0; /* Supprimer le padding */
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #EF4444; /* Rouge au survol */
+  }

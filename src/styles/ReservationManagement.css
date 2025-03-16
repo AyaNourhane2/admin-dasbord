@@ -1,0 +1,93 @@
+/* ReservationManagement.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.reservation-management {
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reservation-management h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-input {
+    padding: 14px;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    font-size: 17px;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.reservation-input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 6px rgba(79, 172, 254, 0.5);
+}
+
+.add-reservation-button {
+    padding: 14px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.add-reservation-button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.07);
+}
+
+.reservation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.97);
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reservation-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-item span {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+}
